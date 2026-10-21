@@ -1,0 +1,18 @@
+*inheritance:instead of rewritting the same ccode in multiple place we allow child class to reuse 
+the parent properties and methods.
+
+Types of 4 inheritance in java.. 
+1.Single level inheritance
+2.multiple level inheritance
+3.Hierarchical level inheritance
+4.multilevel inheritance
+
+*Advantages
+1.reusability
+2.polymorphism
+3.Scalability
+4.maintainability
+
+
+base class-Parent class.
+derived class- child class
