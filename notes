@@ -16,3 +16,18 @@ Types of 4 inheritance in java..
 
 base class-Parent class.
 derived class- child class
+
+//Abstraction meaning..22/10/2026
+Abstraction is the process of showing only the important details and hiding
+ internal implementations from the user.
+it is focused on exposing only the neccesssary details while hiding implementation.
+it can be done by interface(100 %)
+abstract class(0-100%)
+abstractions solves the problem at design level.
+
+to create a abstract class we use abstract keyword.
+abstract class is incomplete because abstract methods created by using abstract keyword and 
+when we create  abstract method then we dont have implementation.
+we cannot create instance of abstract class 
+when we inherit abstract class we should provide an implementation for the abstractmethod else
+we get error.
