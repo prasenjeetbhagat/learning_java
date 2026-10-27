@@ -25,9 +25,33 @@ it can be done by interface(100 %)
 abstract class(0-100%)
 abstractions solves the problem at design level.
 
+26/10/2026--
 to create a abstract class we use abstract keyword.
 abstract class is incomplete because abstract methods created by using abstract keyword and 
 when we create  abstract method then we dont have implementation.
 we cannot create instance of abstract class 
 when we inherit abstract class we should provide an implementation for the abstractmethod else
 we get error.
+
+ACCESS Modifier:->
+
+/*access Modifier defines the visiblity and the accessiblity 
+of the classes and methods and other members.
+they determine where these member can be accessed within the code
+need of access modifier....
+1.security-restrict un wanted access.
+
+2.Encapsulation->hides internal data.
+3.Controlled access->give access where required.
+4.Clean design->avoid misuse of variables and methods.
+
+Types of Access Modifiers 
+
+1.public ->accessible from every where means same class ,differnt package or a subclass.
+2.default-> accessible only in same package..
+3->protected.->
+Aceesible in same package as weel as in differnt sub classes.
+4.Private->accessible only inside the same class 
+scope same class.
+
+*/
