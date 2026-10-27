@@ -1,13 +1,21 @@
-
 package interfaces;
 
 import java.util.Scanner;
 
+// Abstract class
+abstract class Payment {
+
+    abstract void paymentProcess(double amount);
+
+    abstract void generateReceipt();
+}
+
+// Payment Service
 class PaymentService {
 
-    private IPayment payment;
+    private Payment payment;
 
-    public PaymentService(IPayment payment) {
+    public PaymentService(Payment payment) {
         this.payment = payment;
     }
 
@@ -17,6 +25,76 @@ class PaymentService {
     }
 }
 
+// Credit Card Payment
+class CreditCardPayment extends Payment {
+
+    String cardNumber;
+
+    public CreditCardPayment(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    @Override
+    void paymentProcess(double amount) {
+        System.out.println(
+            "Processing credit card payment of Rs: " + amount
+            + " using card number: " + cardNumber
+        );
+    }
+
+    @Override
+    void generateReceipt() {
+        System.out.println("Credit card payment receipt generated.");
+    }
+}
+
+// UPI Payment
+class UpiPayment extends Payment {
+
+    String upiId;
+
+    public UpiPayment(String upiId) {
+        this.upiId = upiId;
+    }
+
+    @Override
+    void paymentProcess(double amount) {
+        System.out.println(
+            "Processing UPI payment of Rs: " + amount
+            + " using UPI ID: " + upiId
+        );
+    }
+
+    @Override
+    void generateReceipt() {
+        System.out.println("UPI payment receipt generated.");
+    }
+}
+
+// Net Banking Payment
+class NetbankingPayment extends Payment {
+
+    String userId;
+
+    public NetbankingPayment(String userId) {
+        this.userId = userId;
+    }
+
+    @Override
+    void paymentProcess(double amount) {
+        System.out.println(
+            "Processing net banking payment of Rs: " + amount
+            + " using user ID: " + userId
+        );
+    }
+
+    @Override
+    void generateReceipt() {
+        System.out.println("Net banking payment receipt generated.");
+    }
+}
+
+// Main Class
 public class Payment_gateway {
 
     public static void main(String[] args) {
@@ -34,7 +112,7 @@ public class Payment_gateway {
         double amount = sc.nextDouble();
         sc.nextLine();
 
-        IPayment payment = null;
+        Payment payment;
 
         switch (choice) {
 
@@ -66,78 +144,5 @@ public class Payment_gateway {
         service.executePayment(amount);
 
         sc.close();
-    }
-}
-
-interface IPayment {
-
-    void paymentProcess(double amount);
-
-    void generateReceipt();
-}
-
-class CreditCardPayment implements IPayment {
-
-    String cardNumber;
-
-    public CreditCardPayment(String cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
-    @Override
-    public void paymentProcess(double amount) {
-        System.out.println(
-            "Processing credit card payment of Rs: " + amount
-            + " using card number: " + cardNumber
-        );
-    }
-
-    @Override
-    public void generateReceipt() {
-        System.out.println("Credit card payment receipt generated.");
-    }
-}
-
-class UpiPayment implements IPayment {
-
-    String upiId;
-
-    public UpiPayment(String upiId) {
-        this.upiId = upiId;
-    }
-
-    @Override
-    public void paymentProcess(double amount) {
-        System.out.println(
-            "Processing UPI payment of Rs: " + amount
-            + " using UPI ID: " + upiId
-        );
-    }
-
-    @Override
-    public void generateReceipt() {
-        System.out.println("UPI payment receipt generated.");
-    }
-}
-
-class NetbankingPayment implements IPayment {
-
-    String userId;
-
-    public NetbankingPayment(String userId) {
-        this.userId = userId;
-    }
-
-    @Override
-    public void paymentProcess(double amount) {
-        System.out.println(
-            "Processing net banking payment of Rs: " + amount
-            + " using user ID: " + userId
-        );
-    }
-
-    @Override
-    public void generateReceipt() {
-        System.out.println("Net banking payment receipt generated.");
     }
 }
