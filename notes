@@ -54,4 +54,23 @@ Aceesible in same package as weel as in differnt sub classes.
 4.Private->accessible only inside the same class 
 scope same class.
 
+
+
+
+
+wrapper class:
+a wrapper class is a class convert primitive datatypes into objects.
+ we have 8 primitive datatypes:
+ primitive,int wrapper class 'Int',
+ byte:Byte
+ short:Short
+ long:Long
+ float:Float
+ double:Double
+ char:Charchter
+ boolean:Boolean
+ needs of wrapper class:
+
+collections in java cannot used without wrapper class
+
 */
