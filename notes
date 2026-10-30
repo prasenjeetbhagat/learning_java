@@ -73,4 +73,34 @@ a wrapper class is a class convert primitive datatypes into objects.
 
 collections in java cannot used without wrapper class
 
+
+
+
+String buffer:
+is a class to create & modify a string is mutable 
+methods of it.
+append()
+replace()
+delete()
+values can be updated beacause it is mutable in string buffer...
+
+>>>>>>>
+Formula for the string buffer
+16+existing string size.
+best than then string buffer.
+string buffer is thread Safe..
+>>>>>>>
+Uses of String buffer:-> 
+SQL Queries:
+Creating Logs message.
+Multithreaded applications.
+>>>>>
+NOT uses of String Buffer
+1.avoid using single thread application.
+2.where the performance is the critical thing exists.
+
+ ******>>String tokeniser:
+ it is a class used to break a string into smaller string calls tokens.
+ 
+
 */
