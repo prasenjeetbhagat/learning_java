@@ -21,7 +21,7 @@ public class Stringbuffer{
 
 
        //reverse
-    //    System.out.println(sb.reverse());
+     System.out.println(sb.reverse());
        System.out.println(sb.length());
        System.out.println(sb.capacity());
     //charat
